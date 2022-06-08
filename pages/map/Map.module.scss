@@ -1,0 +1,15 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  .timelineWrapper {
+    width: 50%;
+  }
+
+  .eventListWrapper {
+    width: 50%;
+  }
+}

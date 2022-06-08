@@ -3,6 +3,7 @@ import moment, { Moment } from 'moment'
 import { EventList, TimelineControler } from '../../components'
 import { START_DATE, END_DATE, DEFAULT_START_DATE, MAX_SPEED, DEFAULT_SPEED } from './constants'
 import { getStep } from './helpers'
+import styles from './Map.module.scss'
 
 const MapPage: FC = () => {
   const [date, setDate] = useState<Moment>(DEFAULT_START_DATE)
@@ -34,19 +35,23 @@ const MapPage: FC = () => {
   ]
 
   return (
-    <main>
-      <TimelineControler
-        currentDate={date}
-        setCurrentDate={setDate}
-        min={START_DATE}
-        max={END_DATE}
-        speed={speed}
-        increaseSpeed={increaseSpeed}
-        decreaseSpeed={decreaseSpeed}
-        isPaused={isPaused}
-        togglePause={togglePause}
-      />
-      <EventList events={events} />
+    <main className={styles.wrapper}>
+      <section className={styles.timelineWrapper}>
+        <TimelineControler
+          currentDate={date}
+          setCurrentDate={setDate}
+          min={START_DATE}
+          max={END_DATE}
+          speed={speed}
+          increaseSpeed={increaseSpeed}
+          decreaseSpeed={decreaseSpeed}
+          isPaused={isPaused}
+          togglePause={togglePause}
+        />
+      </section>
+      <section className={styles.eventListWrapper}>
+        <EventList events={events} />
+      </section>
     </main>
   )
 }
