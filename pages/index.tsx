@@ -1,9 +1,3 @@
-import Link from 'next/link'
+import HomePage from './home'
 
-const Home = () => (
-  <main>
-    <Link href="/map">Try out</Link>
-  </main>
-)
-
-export default Home
+export default HomePage

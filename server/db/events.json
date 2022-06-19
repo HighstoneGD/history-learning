@@ -1,6 +1,61 @@
 [
   {
     "id": "1",
+    "name": "First crusade",
+    "description": "The First Crusade was the first of a series of religious wars, or Crusades, initiated, supported and at times directed by the Latin Church in the medieval period. The objective was the recovery of the Holy Land from Islamic rule.",
+    "date": {
+      "start": "15.08.1096",
+      "end": "12.08.1099"
+    },
+    "tags": [
+      "combat",
+      "religious"
+    ],
+    "countries": [
+      "Crusaders",
+      "Muslim states"
+    ],
+    "importance": 2
+  },
+  {
+    "id": "2",
+    "name": "Second crusade",
+    "description": "The Second Crusade was the second major crusade launched from Europe. The Second Crusade was started in response to the fall of the County of Edessa in 1144 to the forces of Zengi. The county had been founded during the First Crusade by King Baldwin I of Jerusalem in 1098. While it was the first Crusader state to be founded, it was also the first to fall.",
+    "date": {
+      "start": "01.01.1147",
+      "end": "31.12.1150"
+    },
+    "tags": [
+      "combat",
+      "religious"
+    ],
+    "countries": [
+      "Crusaders",
+      "Muslim states"
+    ],
+    "importance": 2
+  },
+  {
+    "id": "3",
+    "name": "Third crusade",
+    "description": "The Third Crusade was an attempt by three European monarchs of Western Christianity (Philip II of France, Richard I of England and Frederick I, Holy Roman Emperor) to reconquer the Holy Land following the capture of Jerusalem by the Ayyubid sultan Saladin in 1187.",
+    "date": {
+      "start": "11.05.1189",
+      "end": "02.09.1192"
+    },
+    "tags": [
+      "combat",
+      "religious"
+    ],
+    "countries": [
+      "Crusaders",
+      "Muslim states",
+      "Byzantine Empire"
+    ],
+    "importance": 1
+  },
+  {
+    "id": "4",
     "name": "Fourth crusade",
     "description": "The Fourth Crusade was a Latin Christian armed expedition called by Pope Innocent III. The stated intent of the expedition was to recapture the Muslim-controlled city of Jerusalem, by first defeating the powerful Egyptian Ayyubid Sultanate, the strongest Muslim state of the time. However, a sequence of economic and political events culminated in the Crusader army's 1202 siege of Zara and the 1204 sack of Constantinople, the capital of the Greek Christian-controlled Byzantine Empire, rather than Egypt as originally planned. This led to the partitioning of the Byzantine Empire by the Crusaders.",
     "date": {
@@ -22,7 +77,34 @@
     "importance": 3
   },
   {
-    "id": "2",
+    "id": "5",
+    "name": "Hundred years' war",
+    "description": "The Hundred Years' War was a series of armed conflicts between the kingdoms of England and France during the Late Middle Ages.",
+    "date": {
+      "start": "24.05.1337",
+      "end": "19.08.1453"
+    },
+    "tags": [
+      "combat",
+      "geopilitical"
+    ],
+    "countries": [
+      "France",
+      "Burgundy",
+      "Brittany",
+      "Scotland",
+      "Castile",
+      "Aragon",
+      "Genoa",
+      "Bohemia",
+      "Avignon",
+      "England",
+      "Portugal"
+    ],
+    "importance": 4
+  },
+  {
+    "id": "6",
     "name": "Fall of Constantinopole",
     "description": "The Fall of Constantinople was the capture of the capital of the Byzantine Empire by the Ottoman Empire.",
     "date": {
@@ -38,7 +120,22 @@
     "importance": 5
   },
   {
-    "id": "3",
+    "id": "7",
+    "name": "Dissolution of the Holy Roman Empire",
+    "description": "The dissolution of the Holy Roman Empire occurred de facto on 6 August 1806, when the last Holy Roman Emperor, Francis II of the House of Habsburg-Lorraine, abdicated his title and released all imperial states and officials from their oaths and obligations to the empire.",
+    "date": {
+      "exact": "06.08.1806"
+    },
+    "tags": [
+      "geopolitical"
+    ],
+    "countries": [
+      "HRE"
+    ],
+    "importance": 4
+  },
+  {
+    "id": "8",
     "name": "Declaration of independence by Ukrainian People's Republic",
     "description": "The First Universal of the Ukrainian Central Council is a state-political act, the universal of the Central Council of Ukraine, which proclaimed the autonomy of Ukraine. Accepted 23 June [O.S. 10 June] 1918 in Kyiv. The full name is the Universal of the Ukrainian Central Rada to the Ukrainian people, in Ukraine and beyond Ukraine.",
     "date": {

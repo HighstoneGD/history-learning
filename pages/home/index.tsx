@@ -12,7 +12,7 @@ import {
 import { Event } from '../../types/event'
 import { getStep, getRangeSize, getStartDate } from './helpers'
 import axios from '../../axios'
-import styles from './Map.module.scss'
+import styles from './Home.module.scss'
 import { DEFAULT_FORMAT } from '../../constants/momentFormats'
 
 const MapPage: FC = () => {
@@ -29,7 +29,12 @@ const MapPage: FC = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       if (!isPaused) {
-        setDate((prevDate) => prevDate.clone().add(getStep(speed)))
+        setDate((prevDate) => {
+          if (prevDate.isSame(END_DATE) || prevDate.isAfter(END_DATE)) {
+            setIsPaused(true)
+          }
+          return prevDate.clone().add(getStep(speed))
+        })
       }
     }, DEFAULT_STEP_TIMEOUT)
 
@@ -37,7 +42,7 @@ const MapPage: FC = () => {
   }, [isPaused, speed])
 
   const fetchEvents = (forceStartDate?: Moment) => {
-    const startDate = forceStartDate || getStartDate(!!events.length ? events[events.length - 1] : null, timestamp, date)
+    const startDate = forceStartDate || timestamp || date
     const endDate = startDate.clone().add(getRangeSize(speed))
     axios.get(`/events?start=${startDate.format(DEFAULT_FORMAT)}&end=${endDate.format(DEFAULT_FORMAT)}`)
       .then((eventList) => {
@@ -73,7 +78,7 @@ const MapPage: FC = () => {
         />
       </section>
       <section className={styles.eventListWrapper}>
-        <EventList events={events} date={date} showOnly={2} />
+        <EventList events={events} date={date} showOnly={3} />
       </section>
     </main>
   )

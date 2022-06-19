@@ -15,6 +15,8 @@ export const getStep = (speed: number): DurationInputArg1 => {
       return { months: 6 }
     case 5:
       return { years: 1 }
+    case 6:
+      return { years: 10 }
   }
 }
 
