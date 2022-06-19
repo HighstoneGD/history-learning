@@ -6,6 +6,9 @@ Install dependencies:
 
 ```
 npm ci
+cd server
+npm ci
+cd ..
 ```
 
 Run client:
