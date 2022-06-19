@@ -1,5 +1,5 @@
 import { FC, useState, useCallback, useEffect } from 'react'
-import moment, { Moment } from 'moment'
+import { Moment } from 'moment'
 import { EventList, TimelineControler } from '../../components'
 import {
   START_DATE,
@@ -10,12 +10,12 @@ import {
   DEFAULT_STEP_TIMEOUT
 } from './constants'
 import { Event } from '../../types/event'
-import { getStep, getRangeSize, getStartDate } from './helpers'
+import { getStep, getRangeSize } from './helpers'
 import axios from '../../axios'
 import styles from './Home.module.scss'
 import { DEFAULT_FORMAT } from '../../constants/momentFormats'
 
-const MapPage: FC = () => {
+const HomePage: FC = () => {
   const [date, setDate] = useState<Moment>(DEFAULT_START_DATE)
   const [isPaused, setIsPaused] = useState<boolean>(true)
   const [speed, setSpeed] = useState<number>(DEFAULT_SPEED)
@@ -84,4 +84,4 @@ const MapPage: FC = () => {
   )
 }
 
-export default MapPage
+export default HomePage

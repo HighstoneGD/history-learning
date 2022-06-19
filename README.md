@@ -16,7 +16,7 @@ Run client:
 npm run dev
 ```
 
-Run server:
+Run server (in another console instance):
 ```
 cd server
 npm run start
