@@ -1,10 +1,8 @@
-import { FromTo } from 'moment'
-
-export interface IEventBlockProps {
-  name: string;
-  range: FromTo;
-}
+import { Moment } from 'moment'
+import { Event } from '../../types/event'
 
 export interface IEventListProps {
-  events: IEventBlockProps[];
+  events: Event[],
+  date: Moment,
+  showOnly: number
 }

@@ -1,14 +1,23 @@
 .wrapper {
-  border: 2px solid black;
+  border-radius: 5px;
   padding: 16px;
+  margin: 24px 0;
+  background-color: #F1DABF;
+  color: #362417;
 
   .date {
     font-size: 32px;
     margin: 4px 0;
+    text-align: center;
   }
 
   .slider {
+    appearance: none;
     width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #92817A;
+    cursor: ew-resize;
   }
 
   .controllersWrapper {

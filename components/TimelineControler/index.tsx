@@ -1,18 +1,17 @@
-import React, { FC, useCallback, useState, useEffect, useRef } from 'react'
-import moment, { Moment } from 'moment'
+import React, { FC, useCallback } from 'react'
+import moment from 'moment'
 import { ITimelineControlerProps } from './types'
-import { getStep } from './helpers'
 import { DEFAULT_FORMAT } from '../../constants/momentFormats'
 import styles from './TimelineControler.module.scss'
 import PauseCircleIcon from '@mui/icons-material/PauseCircle'
 import PlayCircleIcon from '@mui/icons-material/PlayCircle'
 import AddCircleIcon from '@mui/icons-material/AddCircle'
 import DoDisturbOnIcon from '@mui/icons-material/DoDisturbOn'
-import ArrowRightIcon from '@mui/icons-material/ArrowRight'
 
 export const TimelineControler: FC<ITimelineControlerProps> = ({
   currentDate,
   setCurrentDate,
+  onChangeManually,
   min,
   max,
   speed,
@@ -32,6 +31,7 @@ export const TimelineControler: FC<ITimelineControlerProps> = ({
         min={min.toDate().getTime()}
         max={max.toDate().getTime()}
         onChange={onSliderChange}
+        onPointerUp={onChangeManually}
         value={currentDate.toDate().getTime()}
       />
       <div className={styles.controllersWrapper}>
